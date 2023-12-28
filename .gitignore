@@ -1,0 +1,4 @@
+tools/data/*
+tools/app_config.json
+config.json
+emojibot_savedata.json

@@ -1,0 +1,6 @@
+{
+    "host": "example.tld",
+    "app_name": "EmoijBot",
+    "description": "絵文字とデコレーションの更新を通知します",
+    "permission": ["read:admin:show-moderation-log", "write:notes"]
+}
