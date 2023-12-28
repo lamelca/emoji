@@ -87,8 +87,11 @@ def run():
         print("モデレーションログはありません")
         return None
 
-    # untilId を更新する
-    since_id = moderation_logs_full[-1]['id']
+    # since_id を更新する
+    if since_id is None: 
+        since_id = moderation_logs_full[0]['id']
+    else:
+        since_id = moderation_logs_full[-1]['id']
     emojibot_savedata['since_id'] = since_id
     with open(EMOJIBOT_SAVEDARA_FILE, 'w') as f:
         json.dump(emojibot_savedata, f, indent=4)
