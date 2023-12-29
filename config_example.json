@@ -1,7 +1,7 @@
 {
     "host": "example.tld",
     "token": "xxxxxxxxxxxxxxxx",
-    "moderation_logs_limit": 30,
+    "moderation_logs_limit": 5,
     "running_interval_seconds": 60,
     "visibility_add": "public",
     "visibility_update": "public",

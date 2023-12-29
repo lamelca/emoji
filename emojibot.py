@@ -87,11 +87,14 @@ def run():
         print("モデレーションログはありません")
         return None
 
-    # since_id を更新する
+    
+    # sinceId を指定しなかった場合はログが新しい順になっているので古い順に変える
     if since_id is None: 
-        since_id = moderation_logs_full[0]['id']
-    else:
-        since_id = moderation_logs_full[-1]['id']
+        moderation_logs_full.reverse()
+    
+    # since_id を更新する
+    since_id = moderation_logs_full[-1]['id']
+
     emojibot_savedata['since_id'] = since_id
     with open(EMOJIBOT_SAVEDARA_FILE, 'w') as f:
         json.dump(emojibot_savedata, f, indent=4)
